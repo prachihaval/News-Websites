@@ -1,0 +1,320 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Navbar */
+
+header{
+    background:linear-gradient(to right,#0f172a,#1e3a8a);
+    color:white;
+    padding:20px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Breaking News */
+
+.breaking-news{
+    background:#ef4444;
+    color:white;
+    padding:12px;
+    font-weight:500;
+}
+
+/* Hero */
+
+.hero{
+    height:80vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1495020689067-958852a7765e');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.hero button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#1d4ed8;
+}
+
+/* Main Layout */
+
+.main-container{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:30px;
+    padding:60px;
+}
+
+/* News Section */
+
+.section-title{
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.news-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-10px);
+}
+
+.news-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.news-content{
+    padding:20px;
+}
+
+.news-content h3{
+    margin-bottom:15px;
+}
+
+.news-content p{
+    color:gray;
+    margin-bottom:20px;
+}
+
+.news-content button{
+    padding:12px 25px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* Sidebar */
+
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.trending,
+.categories{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.trending h2,
+.categories h2{
+    margin-bottom:20px;
+}
+
+.trending ul{
+    list-style:none;
+}
+
+.trending ul li{
+    margin-bottom:15px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+/* Newsletter */
+
+.newsletter{
+    background:linear-gradient(to right,#2563eb,#7c3aed);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.newsletter h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.newsletter p{
+    margin-bottom:25px;
+}
+
+.newsletter input{
+    padding:15px;
+    width:320px;
+    border:none;
+    border-radius:10px;
+    margin-right:10px;
+}
+
+.newsletter button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    color:#2563eb;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* Footer */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .main-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .newsletter input{
+        width:100%;
+        margin-bottom:15px;
+    }
+
+}
+/* Read More Section */
+
+details{
+    margin-top:15px;
+}
+
+summary{
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    width:140px;
+    font-weight:500;
+    list-style:none;
+    transition:0.3s;
+}
+
+summary:hover{
+    background:#1d4ed8;
+}
+
+.extra-text{
+    margin-top:15px;
+    line-height:1.8;
+    color:#555;
+}
